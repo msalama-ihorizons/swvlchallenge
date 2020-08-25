@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SwvlMovies</string>
+    <string name="flicker_photo_url">https://farm%d.static.flickr.com/%s/%s_%s.jpg</string>
+
+</resources>
