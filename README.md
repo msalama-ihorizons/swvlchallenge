@@ -9,35 +9,57 @@
 # Technical Features
 
 •	Model-View-ViewModel architecture.
+
 •	Kotlin Programming language 
+
 •	Kotlin Coroutines to handle all asynchronous tasks   
+
 •	Android Jetpack
-  o	LiveData to notify view with any data changes
-  o	Lifecycle handle lifecycle state changes 
-  o	ViewModel allows data to survive configuration changes like screen rotations 
-  o	Room to save data locally on SQLite so user can use the app offline 
-  o	Hilt to handle dependency injection 
+
+    o	LiveData to notify view with any data changes
+  
+    o	Lifecycle handle lifecycle state changes 
+  
+    o	ViewModel allows data to survive configuration changes like screen rotations 
+  
+    o	Room to save data locally on SQLite so user can use the app offline 
+  
+    o	Hilt to handle dependency injection 
+  
 •	Retrofit for https network calls
+
 •	Junit4, Hamcrest, AndroidX Test, and AndroidX architecture components core for building unit tests
 
 # Prototype Packages 
 
 •	api: it contains flicker apis 
+
 •	model: contains all model classes.
+
 •	repository: contains repositories classes to fetch data and handle all business logic.
+
 •	db: for local database creation and its operations like insert and select
+
 •	di: to provide app third party libraries dependencies like Room and Retrofit
+
 •	ui: contains view classes along with their ViewModel.
+
 •	test: contains all unit tests classes
 
 # Libraries
 
 •	Retrofit 
+
 •	GSON
+
 •	Hilt
+
 •	Room
+
 •	Junit4
+
 •	Robolectric
+
 •	Mockito
 
 # How it works 
