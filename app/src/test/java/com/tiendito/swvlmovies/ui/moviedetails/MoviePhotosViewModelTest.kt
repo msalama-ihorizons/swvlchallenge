@@ -16,7 +16,6 @@ class MoviePhotosViewModelTest {
 
     private val repository = Mockito.mock(MoviesRepository::class.java)
     private val savedStateHandle = Mockito.mock(SavedStateHandle::class.java)
-    private var moviePhotosViewModel = MoviePhotosViewModel(repository, savedStateHandle)
 
     @Test
     fun testGetMoviePhotos() {

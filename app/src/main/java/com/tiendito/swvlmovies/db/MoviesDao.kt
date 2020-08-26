@@ -21,14 +21,8 @@ interface MoviesDao {
     @Query("SELECT * from movies_table")
     fun loadMovies(): Flow<List<Movie>>
 
-    @Query("SELECT * from movies_table")
-    fun loadOrderss(): LiveData<List<Movie>>
-
-    /*@Query("SELECT * FROM movies_table where title LIKE  :title order by year")
-    suspend fun loadAllMoviesByTitle(title: String?): DataSource.Factory<Int, Movie>*/
     @Query("SELECT * FROM movies_table WHERE title LIKE '%' || :title || '%' order by rating  DESC")
      fun loadAllMoviesByTitle(title: String?): LiveData<List<Movie>>
-
 
     @Query("DELETE FROM movies_table")
     suspend fun deleteAll()

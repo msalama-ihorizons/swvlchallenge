@@ -65,15 +65,8 @@ class MoviesListActivity : AppCompatActivity() {
                     }
                 Status.SUCCESS -> {
                     Log.d("MainActivityyyy", resources.data?.size.toString())
-                   // moviesAdapter.items = resources?.data
                     println(resources.data)
                     moviesAdapter.items =  resources.data
-                   // val byLength = resources?.data?.groupBy { it.year }
-
-                   /* val phonesByYearMutable = LinkedHashMap<Int, MutableList<Movie>>();
-
-                    resources?.data?.groupByTo(phonesByYearMutable, { it.year }, { it.first })
-                    println(phonesByYearMutable)*/
 
                 }
                 Status.ERROR -> {}

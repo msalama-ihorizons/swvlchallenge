@@ -17,5 +17,4 @@ class MoviePhotosViewModel   @ViewModelInject constructor(
             movieTitle->   moviesRepository.getMoviePhotos(movieTitle)
     }
 
-
 }

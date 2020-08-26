@@ -24,17 +24,18 @@ import java.io.InputStream
 )
 
 @TypeConverters(DataConverters::class)
-abstract class MoviesDatabase: RoomDatabase() {
+abstract class MoviesDatabase : RoomDatabase() {
 
     abstract fun moviesDao(): MoviesDao
+
     companion object {
         @Volatile
         private var INSTANCE: MoviesDatabase? = null
 
         fun getDatabase(context: Context): MoviesDatabase {
             return INSTANCE
-                ?:  synchronized(this) {
-                    val instance =  Room.databaseBuilder(
+                ?: synchronized(this) {
+                    val instance = Room.databaseBuilder(
                         context,
                         MoviesDatabase::class.java,
                         "movies.db"
@@ -74,14 +75,8 @@ abstract class MoviesDatabase: RoomDatabase() {
             val moviesDao = db.moviesDao()
 
             Log.d("MoviesDatabase", moviesList.size.toString())
-            // Empty database on first load
             moviesDao.deleteAll()
-
-          /*  moviesList.forEach {
-                moviesDao.insert(it)
-            }*/
-
-                moviesDao.insertMovies(moviesList)
+            moviesDao.insertMovies(moviesList)
         }
 
         fun readJSONFromAsset(appContext: Context): String {
