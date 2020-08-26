@@ -1,6 +1,6 @@
 # SWVL Challenge 
 
-Swvl prototype application to list past decade movies with its year, rate, and photos. and categories them with its year.
+Swvl prototype application to list past decade movies with its year, rate, and photos. and categorized them with its year.
 
 # Features 
 
