@@ -1,3 +1,7 @@
+# SWVL Challenge 
+
+Swvl prototype application to list past decade movies with its year, rate, and photos. and categories them with its year.
+
 # Features 
 
 •	User will able to see all top rated 5 movies categories with its year.
@@ -65,7 +69,9 @@
 # How it works 
 
 Once app is open for the first time, Movies list will be loaded from json file and then populated to local database.
+
 App will display the top rated 5 movies categorized by its year, once user click the keyboard search button, app will filter the movies by the keyword from the load database.
+
 When user click on movie will app details activity for displaying movies related photos by calling flicker search api.
 
 
