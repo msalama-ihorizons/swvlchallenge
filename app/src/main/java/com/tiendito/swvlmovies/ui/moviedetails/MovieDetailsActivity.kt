@@ -41,7 +41,7 @@ class MovieDetailsActivity : AppCompatActivity() {
         moviePhotosRV.layoutManager = GridLayoutManager(this, NUMBER_OF_COL)
         moviePhotosRV.adapter = moviePhotosAdapter
 
-        moviePhotosViewModel.moviePhotosLiveData.observe(this, Observer { resources ->
+        moviePhotosViewModel.moviePhotosLiveData?.observe(this, Observer { resources ->
             when (resources.status) {
                 Status.SUCCESS -> {
                     moviePhotosAdapter.items = resources.data

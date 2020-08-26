@@ -142,6 +142,9 @@ dependencies {
 
     def mockitoCoreVersion = '2.25.0'
     testImplementation "org.mockito:mockito-core:$mockitoCoreVersion"
+
+    testImplementation 'org.mockito:mockito-inline:2.13.0'
+
 /*    def mockitoAllVersion = '1.10.19'
     testImplementation "org.mockito:mockito-all:$mockitoAllVersion"
     def mockitoAndroidVersion = '2.25.0'

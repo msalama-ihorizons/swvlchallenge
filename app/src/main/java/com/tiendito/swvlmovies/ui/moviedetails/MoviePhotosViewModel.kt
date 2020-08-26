@@ -8,12 +8,12 @@ import com.tiendito.swvlmovies.ui.moviedetails.MovieDetailsActivity.Companion.EX
 
 class MoviePhotosViewModel   @ViewModelInject constructor(
     private val moviesRepository: MoviesRepository,
-    @Assisted private val savedStateHandle: SavedStateHandle
+    @Assisted private val savedStateHandle: SavedStateHandle?
 ): ViewModel() {
 
-    private val movieTitle = savedStateHandle.getLiveData<String>(EXTRA_MOVIE_TITLE)
+    private val movieTitle = savedStateHandle?.getLiveData<String>(EXTRA_MOVIE_TITLE)
 
-    val moviePhotosLiveData = movieTitle.switchMap {
+    val moviePhotosLiveData = movieTitle?.switchMap {
             movieTitle->   moviesRepository.getMoviePhotos(movieTitle)
     }
 
