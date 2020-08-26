@@ -1,7 +1,9 @@
 # Features 
 
 •	User will able to see all top rated 5 movies categories with its year.
+
 •	User will be able to search by movie title.
+
 •	User will be able to display all movie’s photo from flicker website by movie title. 
 
 # Technical Features
