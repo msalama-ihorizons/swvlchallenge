@@ -27,6 +27,7 @@ class MoviesRepository @Inject constructor(
                 page = "1",
                 perPage = "10"
             )
+
             if (result.isSuccessful) {
 
                 emit(Resource.success(result.body()?.photos?.photo))
@@ -49,9 +50,9 @@ class MoviesRepository @Inject constructor(
         result.addSource(moviesLiveData) { response ->
             result.value = Resource.complete(null)
             result.value = Resource.success(
-                response.groupBy { movie ->
+                response?.groupBy { movie ->
                     movie.year
-                }.toList().map { pair ->
+                }?.toList()?.map { pair ->
                     YearMovies(pair.first, pair.second.take(5))
                 }
             )
