@@ -16,15 +16,15 @@
 
 •	Android Jetpack
 
-    o	LiveData to notify view with any data changes
+    o LiveData to notify view with any data changes
   
-    o	Lifecycle handle lifecycle state changes 
+    o Lifecycle handle lifecycle state changes 
   
-    o	ViewModel allows data to survive configuration changes like screen rotations 
+    o ViewModel allows data to survive configuration changes like screen rotations 
   
-    o	Room to save data locally on SQLite so user can use the app offline 
+    o Room to save data locally on SQLite so user can use the app offline 
   
-    o	Hilt to handle dependency injection 
+    o Hilt to handle dependency injection 
   
 •	Retrofit for https network calls
 
