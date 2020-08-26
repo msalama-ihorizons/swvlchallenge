@@ -3,8 +3,7 @@ package com.tiendito.swvlmovies.ui.movieslist
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
-import com.example.nousapp.data.model.Resource
-import com.tiendito.swvlmovies.db.Movie
+import com.tiendito.swvlmovies.model.Resource
 import com.tiendito.swvlmovies.model.YearMovies
 import com.tiendito.swvlmovies.repository.MoviesRepository
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.nousapp.data.model
+package com.tiendito.swvlmovies.model
 
 
 /**

@@ -8,8 +8,7 @@ import android.widget.TextView.OnEditorActionListener
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import com.example.nousapp.data.model.Status
-import com.leodroidcoder.genericadapter.OnRecyclerItemClickListener
+import com.tiendito.swvlmovies.model.Status
 import com.tiendito.swvlmovies.R
 import com.tiendito.swvlmovies.db.Movie
 import com.tiendito.swvlmovies.ui.moviedetails.MovieDetailsActivity

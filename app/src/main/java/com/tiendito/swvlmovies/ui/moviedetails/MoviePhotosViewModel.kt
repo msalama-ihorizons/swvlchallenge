@@ -3,8 +3,6 @@ package com.tiendito.swvlmovies.ui.moviedetails
 import androidx.hilt.Assisted
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
-import com.example.nousapp.data.model.Resource
-import com.tiendito.swvlmovies.model.YearMovies
 import com.tiendito.swvlmovies.repository.MoviesRepository
 import com.tiendito.swvlmovies.ui.moviedetails.MovieDetailsActivity.Companion.EXTRA_MOVIE_TITLE
 

@@ -1,13 +1,9 @@
 package com.tiendito.swvlmovies.repository
 
-import androidx.annotation.WorkerThread
 import androidx.lifecycle.*
-import androidx.paging.PagedList
-import androidx.paging.toLiveData
-import com.example.nousapp.data.model.Resource
+import com.tiendito.swvlmovies.model.Resource
 import com.tiendito.swvlmovies.api.FlickerApis
 import com.tiendito.swvlmovies.api.Photo
-import com.tiendito.swvlmovies.db.Movie
 import com.tiendito.swvlmovies.db.MoviesDao
 import com.tiendito.swvlmovies.model.YearMovies
 import javax.inject.Inject
@@ -21,7 +17,6 @@ class MoviesRepository @Inject constructor(
     fun getMoviePhotos(movieTitle: String): LiveData<Resource<List<Photo>>> {
 
         return liveData {
-            //moviesDao.loadAllMoviesByTitle(title).toLiveData(pageSize = 50)
             emit(Resource.loading(null))
             val result = flickerApis.searchPhotos(
                 method = "flickr.photos.search",

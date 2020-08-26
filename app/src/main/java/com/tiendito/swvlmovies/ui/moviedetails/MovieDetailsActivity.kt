@@ -7,11 +7,9 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.nousapp.data.model.Status
+import com.tiendito.swvlmovies.model.Status
 import com.leodroidcoder.genericadapter.OnRecyclerItemClickListener
 import com.tiendito.swvlmovies.R
-import com.tiendito.swvlmovies.ui.movieslist.MoviesViewModel
-import com.tiendito.swvlmovies.ui.movieslist.YearsMoviesAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.movie_details_activity.*
 
