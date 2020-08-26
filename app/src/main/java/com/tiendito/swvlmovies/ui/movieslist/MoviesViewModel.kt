@@ -12,7 +12,7 @@ class MoviesViewModel  @ViewModelInject constructor(
     @Assisted private val savedStateHandle: SavedStateHandle
 ): ViewModel() {
 
-    private val searchKeyword = MutableLiveData<String>()
+     val searchKeyword = MutableLiveData<String>()
 
     init {
         searchMovies("")

@@ -40,8 +40,6 @@ class YearsMoviesAdapter (context: Context?, listener: MoviesAdapter.MoviesItemC
             itemView.moviesRV.adapter = moviesAdapter
 
             moviesAdapter.items= item?.movies
-
-            //itemView.movieTitle.text = item?.title + " "+ item?.year +" "+ item?.rating
         }
 
     }

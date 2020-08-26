@@ -22,7 +22,7 @@ class MoviesViewModelTest {
     private var moviesViewModel = MoviesViewModel(repository, savedStateHandle)
 
     @Test
-    fun textSearchMovies() {
+    fun testSearchMovies() {
         moviesViewModel.searchMovies("whiplash")
         Mockito.verify(repository, Mockito.never())
             .searchMovies("whiplash")

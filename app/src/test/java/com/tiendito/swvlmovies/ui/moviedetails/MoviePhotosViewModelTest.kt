@@ -19,7 +19,7 @@ class MoviePhotosViewModelTest {
     private var moviePhotosViewModel = MoviePhotosViewModel(repository, savedStateHandle)
 
     @Test
-    fun textGetMoviePhotos() {
+    fun testGetMoviePhotos() {
         savedStateHandle.set("extraMovieTitle", "")
         Mockito.verify(repository, Mockito.never())
             .getMoviePhotos("")

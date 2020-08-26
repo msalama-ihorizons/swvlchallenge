@@ -18,6 +18,7 @@ class MoviesRepository @Inject constructor(
 
         return liveData {
             emit(Resource.loading(null))
+
             val result = flickerApis.searchPhotos(
                 method = "flickr.photos.search",
                 apiKey = "99a09da7219c20cd6e6dacd82ae76d33",

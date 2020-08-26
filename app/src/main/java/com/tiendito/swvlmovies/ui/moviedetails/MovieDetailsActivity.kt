@@ -3,6 +3,7 @@ package com.tiendito.swvlmovies.ui.moviedetails
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -34,9 +35,7 @@ class MovieDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.movie_details_activity)
 
-        moviePhotosAdapter = MoviePhotosAdapter(this, OnRecyclerItemClickListener {
-
-        })
+        moviePhotosAdapter = MoviePhotosAdapter(this, OnRecyclerItemClickListener {})
 
         moviePhotosRV.layoutManager = GridLayoutManager(this, NUMBER_OF_COL)
         moviePhotosRV.adapter = moviePhotosAdapter
@@ -49,8 +48,10 @@ class MovieDetailsActivity : AppCompatActivity() {
                 Status.ERROR -> {
                 }
                 Status.LOADING -> {
+                    progressBar.visibility = View.VISIBLE
                 }
                 Status.COMPLETE -> {
+                    progressBar.visibility = View.GONE
                 }
             }
         })

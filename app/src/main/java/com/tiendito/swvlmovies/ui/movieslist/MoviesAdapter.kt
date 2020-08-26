@@ -37,7 +37,9 @@ class MoviesAdapter (context: Context?, listener: MoviesItemClickListener?) :
         }
 
         override fun onBind(item: Movie?) {
-            itemView.movieTitle.text = item?.title + " "+ item?.year +" "+ item?.rating
+            itemView.movieTitle.text = item?.title
+            itemView.movieYear.text = item?.year.toString()
+            itemView.movieRate.text = item?.rating.toString()
         }
 
         override fun onClick(v: View?) {

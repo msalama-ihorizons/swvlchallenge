@@ -13,7 +13,7 @@ import com.tiendito.swvlmovies.R
 import com.tiendito.swvlmovies.db.Movie
 import com.tiendito.swvlmovies.ui.moviedetails.MovieDetailsActivity
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.movies_list_activity.*
 
 
 @AndroidEntryPoint
@@ -24,7 +24,7 @@ class MoviesListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.movies_list_activity)
 
         moviesAdapter =
             YearsMoviesAdapter(
@@ -55,6 +55,9 @@ class MoviesListActivity : AppCompatActivity() {
             false
         })
 
+        moviesViewModel.searchKeyword.observe(this, Observer {
+            searchEdt.setText(it)
+        })
         moviesViewModel.moviesList.observe(this, Observer { resources ->
             when (resources.status) {
                     Status.LOADING -> {
